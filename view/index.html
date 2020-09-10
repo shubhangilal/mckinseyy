@@ -16,6 +16,16 @@
          <button id="button">Insert</button>
         
         <!--You can load all the javascript files here-->
-        <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" src="js/script.js">
+    function addItem(){
+        var li = document.createElement("LI");  
+        var input = document.getElementById("add");
+        li.innerHTML = input.value;
+        input.value = "";
+
+        document.getElementById("faves").appendChild(li);
+    }</script>
+    
+    <input type="button" id="btnAdd" value="Add" onclick="addItem()">
     </body>
 </html>
